@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alan Damatta</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="loader" aria-hidden="true">
+            <div class="loader-content">
+                <div class="loader-letters">
+                    <span class="loader-circle">W</span>
+                    <span class="loader-circle">E</span>
+                    <span class="loader-circle">L</span>
+                    <span class="loader-circle">C</span>
+                    <span class="loader-circle">O</span>
+                    <span class="loader-circle">M</span>
+                    <span class="loader-circle">E</span>
+                </div>
+                <div class="loader-bar-wrap">
+                    <div class="loader-bar-fill"></div>
+                </div>
+            </div>
+        </div>
+        <div class="top-bar" aria-label="Keyboard hints">
+            <kbd>t</kbd> cycle color
+        </div>
+        <div class="container">
+            <div class="intro">
+                <h4 class="hi" data-text="Hi, I'm Alan.">Hi, I'm Alan.</h4>
+                <nav class="links" aria-label="Contact and social">
+                    <a
+                        href="https://github.com/alandamatta"
+                        target="_blank"
+                        rel="noopener"
+                        ><kbd>g</kbd> github</a
+                    >
+                    <a
+                        href="https://www.linkedin.com/in/alandamatta/"
+                        target="_blank"
+                        rel="noopener"
+                        ><kbd>l</kbd> linkedin</a
+                    >
+                    <a href="mailto:alandamatta@live.com"><kbd>e</kbd> email</a>
+                </nav>
+                <p class="me">
+                    A software engineer with 8+ years building Java webapps, now
+                    deep in Python data pipelines and building
+                    <a href="https://plumlang.dev">plumlang.dev</a> — a syntax
+                    layer that makes AI operations first-class primitives in
+                    Python.
+                </p>
+            </div>
+            <section class="projects" aria-label="Projects">
+                <p class="section-label">projects</p>
+                <ul class="project-list" role="listbox" aria-label="Projects">
+                    <li
+                        class="project-item"
+                        role="option"
+                        aria-selected="true"
+                        data-href="https://plumlang.dev"
+                    >
+                        <span class="project-cursor" aria-hidden="true"
+                            >&gt;</span
+                        >
+                        <span class="project-name">plumlang.dev</span>
+                        <span class="project-desc"
+                            >AI operations as first-class Python
+                            primitives</span
+                        >
+                        <span class="project-tags"
+                            ><span class="tag">python</span
+                            ><span class="tag">ai</span></span
+                        >
+                    </li>
+                    <li
+                        class="project-item"
+                        role="option"
+                        aria-selected="false"
+                        data-href="https://adamatta.dev"
+                    >
+                        <span class="project-cursor" aria-hidden="true"
+                            >&gt;</span
+                        >
+                        <span class="project-name">adamatta.dev</span>
+                        <span class="project-desc"
+                            >Personal portfolio — retro-futuristic terminal
+                            aesthetic</span
+                        >
+                        <span class="project-tags"
+                            ><span class="tag">html</span
+                            ><span class="tag">css</span
+                            ><span class="tag">js</span></span
+                        >
+                    </li>
+                </ul>
+            </section>
+            <section class="projects" aria-label="Writing">
+                <p class="section-label">writing</p>
+                <ul class="project-list" role="listbox" aria-label="Writing">
+                    <li class="project-item" role="option" aria-selected="false" data-href="#">
+                        <span class="project-cursor" aria-hidden="true">&gt;</span>
+                        <span class="project-name">building plumlang</span>
+                        <span class="project-desc">why AI operations deserve syntax-level support in Python</span>
+                        <span class="post-date">2025-04</span>
+                    </li>
+                    <li class="project-item" role="option" aria-selected="false" data-href="#">
+                        <span class="project-cursor" aria-hidden="true">&gt;</span>
+                        <span class="project-name">data pipeline lessons</span>
+                        <span class="project-desc">eight years of Java, then Python — what actually changed</span>
+                        <span class="post-date">2025-02</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div id="search-bar" class="search-bar" aria-hidden="true" role="search">
+            <span class="search-prefix" aria-hidden="true">:</span>
+            <input class="search-input" type="text" autocomplete="off" spellcheck="false" aria-label="Search projects and posts" />
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
