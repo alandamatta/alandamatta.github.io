@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="top-bar" aria-label="Keyboard hints">
-            <kbd>t</kbd> cycle color
+            <kbd>t</kbd> cycle color &nbsp;·&nbsp; <kbd>r</kbd> résumé
         </div>
         <div class="container">
             <div class="intro">
@@ -51,6 +51,23 @@
                     layer that makes AI operations first-class primitives in
                     Python.
                 </p>
+                <a
+                    id="resume-cta"
+                    class="resume-cta"
+                    href="/resume.pdf"
+                    download
+                    aria-label="Download résumé as PDF"
+                >
+                    <span class="resume-cta-marker" aria-hidden="true"
+                        >&#9660;</span
+                    >
+                    <span class="resume-cta-label"
+                        >DOWNLOAD_RESUME<span class="resume-cta-ext"
+                            >.PDF</span
+                        ></span
+                    >
+                    <kbd>r</kbd>
+                </a>
             </div>
             <section class="projects" aria-label="Projects">
                 <p class="section-label">projects</p>
@@ -74,7 +91,7 @@
                             ><span class="tag">ai</span></span
                         >
                     </li>
-                    <li
+                    <!--<li
                         class="project-item"
                         role="option"
                         aria-selected="false"
@@ -93,30 +110,61 @@
                             ><span class="tag">css</span
                             ><span class="tag">js</span></span
                         >
-                    </li>
+                    </li>-->
                 </ul>
             </section>
             <section class="projects" aria-label="Writing">
                 <p class="section-label">writing</p>
                 <ul class="project-list" role="listbox" aria-label="Writing">
-                    <li class="project-item" role="option" aria-selected="false" data-href="#">
-                        <span class="project-cursor" aria-hidden="true">&gt;</span>
+                    <li
+                        class="project-item"
+                        role="option"
+                        aria-selected="false"
+                        data-href="#"
+                    >
+                        <span class="project-cursor" aria-hidden="true"
+                            >&gt;</span
+                        >
                         <span class="project-name">building plumlang</span>
-                        <span class="project-desc">why AI operations deserve syntax-level support in Python</span>
+                        <span class="project-desc"
+                            >why AI operations deserve syntax-level support in
+                            Python</span
+                        >
                         <span class="post-date">2025-04</span>
                     </li>
-                    <li class="project-item" role="option" aria-selected="false" data-href="#">
-                        <span class="project-cursor" aria-hidden="true">&gt;</span>
+                    <!--<li
+                        class="project-item"
+                        role="option"
+                        aria-selected="false"
+                        data-href="#"
+                    >
+                        <span class="project-cursor" aria-hidden="true"
+                            >&gt;</span
+                        >
                         <span class="project-name">data pipeline lessons</span>
-                        <span class="project-desc">eight years of Java, then Python — what actually changed</span>
+                        <span class="project-desc"
+                            >eight years of Java, then Python — what actually
+                            changed</span
+                        >
                         <span class="post-date">2025-02</span>
-                    </li>
+                    </li>-->
                 </ul>
             </section>
         </div>
-        <div id="search-bar" class="search-bar" aria-hidden="true" role="search">
+        <div
+            id="search-bar"
+            class="search-bar"
+            aria-hidden="true"
+            role="search"
+        >
             <span class="search-prefix" aria-hidden="true">:</span>
-            <input class="search-input" type="text" autocomplete="off" spellcheck="false" aria-label="Search projects and posts" />
+            <input
+                class="search-input"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Search projects and posts"
+            />
         </div>
         <script src="js/main.js"></script>
     </body>

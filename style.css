@@ -134,9 +134,11 @@ body {
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
 }
 
 .projects {
@@ -432,6 +434,49 @@ a:focus-visible {
 
 .project-item.is-hidden {
     display: none;
+}
+
+.resume-cta {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--c);
+    color: var(--c);
+    text-decoration: none;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    background: rgba(var(--cr), 0.04);
+    box-shadow:
+        -2px 0 0 rgba(255, 20, 60, 0.5),
+        2px 0 0 rgba(0, 210, 255, 0.5),
+        0 0 8px rgba(var(--cr), 0.25),
+        inset 0 0 12px rgba(var(--cr), 0.06);
+    text-shadow:
+        0 0 4px var(--c),
+        0 0 8px rgba(var(--cr), 0.5);
+}
+
+.resume-cta:hover,
+.resume-cta:focus {
+    background: rgba(var(--cr), 0.12);
+    border-bottom: 1px solid var(--c);
+    box-shadow:
+        -2px 0 0 rgba(255, 20, 60, 0.7),
+        2px 0 0 rgba(0, 210, 255, 0.7),
+        0 0 14px rgba(var(--cr), 0.55),
+        inset 0 0 14px rgba(var(--cr), 0.12);
+}
+
+.resume-cta-ext {
+    opacity: 0.55;
+}
+
+.resume-cta kbd {
+    margin-left: 0.25rem;
+    opacity: 0.7;
 }
 
 .search-bar {

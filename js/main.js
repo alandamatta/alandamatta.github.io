@@ -65,6 +65,8 @@ const shortcuts = {
   e: 'mailto:alandamatta@live.com',
 };
 
+const resumeCta = document.getElementById('resume-cta');
+
 const projectItems = [...document.querySelectorAll('.project-item')];
 let activeProject = 0;
 
@@ -156,6 +158,7 @@ document.addEventListener('keydown', (e) => {
   }
   if (e.key === ':') { e.preventDefault(); openSearch(); return; }
   if (e.key === 't') { cycleTheme(); return; }
+  if (e.key === 'r' && resumeCta) { e.preventDefault(); resumeCta.click(); return; }
 
   const url = shortcuts[e.key.toLowerCase()];
   if (url) window.open(url, url.startsWith('mailto') ? '_self' : '_blank');
