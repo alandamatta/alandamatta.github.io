@@ -474,6 +474,40 @@ a:focus-visible {
     opacity: 0.55;
 }
 
+.resume-cta-loader {
+    display: none;
+    letter-spacing: 0.1em;
+}
+
+.resume-cta.is-loading .resume-cta-marker,
+.resume-cta.is-loading .resume-cta-label {
+    display: none;
+}
+
+.resume-cta.is-loading .resume-cta-loader {
+    display: inline;
+}
+
+.resume-cta.is-loading {
+    pointer-events: none;
+}
+
+.resume-cta-dot {
+    display: inline-block;
+    width: 0.5em;
+    opacity: 0.2;
+    animation: resume-cta-dot 1.05s steps(1, end) infinite;
+}
+
+.resume-cta-dot:nth-child(1) { animation-delay: 0s; }
+.resume-cta-dot:nth-child(2) { animation-delay: 0.15s; }
+.resume-cta-dot:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes resume-cta-dot {
+    0%, 60%, 100% { opacity: 0.2; }
+    20%, 40%      { opacity: 1; }
+}
+
 .resume-cta kbd {
     margin-left: 0.25rem;
     opacity: 0.7;

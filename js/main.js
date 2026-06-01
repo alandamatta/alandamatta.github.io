@@ -67,6 +67,34 @@ const shortcuts = {
 
 const resumeCta = document.getElementById('resume-cta');
 
+if (resumeCta) {
+  resumeCta.addEventListener('click', async (e) => {
+    if (resumeCta.classList.contains('is-loading')) { e.preventDefault(); return; }
+    e.preventDefault();
+    resumeCta.classList.add('is-loading');
+    const start = performance.now();
+    try {
+      const res = await fetch(resumeCta.href, { cache: 'no-store' });
+      if (!res.ok) throw new Error(res.statusText);
+      const blob = await res.blob();
+      const elapsed = performance.now() - start;
+      if (elapsed < 700) await new Promise(r => setTimeout(r, 700 - elapsed));
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch (err) {
+      window.location.href = resumeCta.getAttribute('href');
+    } finally {
+      resumeCta.classList.remove('is-loading');
+    }
+  });
+}
+
 const projectItems = [...document.querySelectorAll('.project-item')];
 let activeProject = 0;
 
